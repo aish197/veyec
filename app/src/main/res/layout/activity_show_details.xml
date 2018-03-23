@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aishwaryasathyadas.veyec.ShowDetailsActivity">
+
+
+    <EditText
+        android:id="@+id/loc_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="enter location"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/searchbutton" />
+
+    <Button
+        android:id="@+id/searchbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loc_search"
+        android:text="Button"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="64dp" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/searchbutton"
+        app:layout_constraintTop_toBottomOf="@+id/searchbutton"
+        tools:layout_editor_absoluteX="0dp">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

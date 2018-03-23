@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    card_view:cardElevation="5dp"
+    card_view:contentPadding="5dp"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardMaxElevation="5dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="501dp"
+        android:background="#ECEFF1"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=" Date: "
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/DateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_toEndOf="@+id/Date"
+            android:layout_toRightOf="@+id/Date"
+            android:gravity="center"
+            android:text="Show date"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/Phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Date"
+            android:gravity="center"
+            android:text="Phone Number: "
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/PhoneTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/DateTextView"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_toEndOf="@+id/Phone"
+            android:layout_toRightOf="@+id/Phone"
+            android:gravity="center"
+            android:text="Show Number"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/Videourl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/Location"
+            android:layout_alignRight="@+id/Location"
+            android:layout_below="@+id/Location"
+            android:gravity="center"
+            android:text="Videourl: "
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/VideourlTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/LatitudeTextView"
+            android:layout_alignStart="@+id/LatitudeTextView"
+            android:layout_below="@+id/LocationTextView"
+            android:gravity="center"
+            android:text="Show Videourl"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/Longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Phone"
+            android:gravity="center"
+            android:text="Longitude: "
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/LongitudeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PhoneTextView"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_toEndOf="@+id/Longitude"
+            android:layout_toRightOf="@+id/Longitude"
+            android:gravity="center"
+            android:text="Show Longitude"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/Latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Longitude"
+            android:gravity="center"
+            android:text="Latitude: "
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/LatitudeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LongitudeTextView"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_toEndOf="@+id/Latitude"
+            android:layout_toRightOf="@+id/Latitude"
+            android:gravity="center"
+            android:text="Show Latitude"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Latitude"
+            android:gravity="center"
+            android:text="Location: "
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/LocationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LatitudeTextView"
+            android:layout_toEndOf="@+id/Videourl"
+            android:layout_toRightOf="@+id/Videourl"
+            android:gravity="center"
+            android:text="Show Location"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
