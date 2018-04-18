@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
     android:id="@+id/cardview1"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     card_view:cardCornerRadius="5dp"
     card_view:cardElevation="5dp"
     card_view:cardMaxElevation="5dp"
-    card_view:contentPadding="5dp">
+    card_view:contentPadding="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -15,26 +19,61 @@
         android:background="#ECEFF1"
         android:padding="10dp">
 
+
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/DateTextView"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/DateTextView"
+            android:gravity="center"
+            android:text=" DETAILS "
+            android:textColor="#000"
+            android:textSize="40dp" />
+
+
+        <TextView
+            android:id="@+id/NameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/DateTextView"
+            android:layout_toRightOf="@+id/DateTextView"
+            android:gravity="center"
+
+            android:textColor="#000"
+            android:textSize="40dp" />
+
         <TextView
             android:id="@+id/Date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Phone"
             android:gravity="center"
-            android:text=" Date: "
+
             android:textColor="#000"
-            android:textSize="20dp" />
+            android:textSize="30dp" />
 
         <TextView
             android:id="@+id/DateTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/PhoneTextView"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/PhoneTextView"
+            android:layout_above="@+id/PhoneTextView"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/Date"
+            android:layout_toRightOf="@+id/Date"
             android:gravity="center"
-            android:text="Show date"
+            android:text="Show Date"
             android:textColor="#000"
-            android:textSize="20dp" />
+            android:textSize="30dp" />
 
         <TextView
             android:id="@+id/Phone"
@@ -42,51 +81,63 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/Date"
+            android:layout_below="@+id/Name"
             android:gravity="center"
-            android:text="Phone Number: "
+
             android:textColor="#000"
-            android:textSize="20dp" />
+            android:textSize="30dp" />
 
         <TextView
             android:id="@+id/PhoneTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/DateTextView"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:layout_toEndOf="@+id/Phone"
-            android:layout_toRightOf="@+id/Phone"
+            android:layout_above="@+id/Location"
+            android:layout_alignLeft="@+id/DateTextView"
+            android:layout_alignStart="@+id/DateTextView"
             android:gravity="center"
             android:text="Show Number"
             android:textColor="#000"
-            android:textSize="20dp" />
+            android:textSize="30dp" />
 
 
         <TextView
             android:id="@+id/Videourl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/Latitude"
-            android:layout_alignRight="@+id/Latitude"
+            android:layout_alignEnd="@+id/Location"
+            android:layout_alignRight="@+id/Location"
             android:layout_below="@+id/Location"
             android:gravity="center"
-            android:text="Videourl: "
+
             android:textColor="#000"
-            android:textSize="20dp" />
+            android:textSize="30dp" />
+
 
         <TextView
             android:id="@+id/VideourlTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/LatitudeTextView"
-            android:layout_alignStart="@+id/LatitudeTextView"
-            android:layout_below="@+id/LocationTextView"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="37dp"
+            android:layout_toEndOf="@+id/Videourl"
+            android:layout_toRightOf="@+id/Videourl"
             android:gravity="center"
             android:text="Show Videourl"
             android:textColor="#000"
-            android:textSize="20dp" />
+            android:textSize="5dp" />
 
+
+        <TextView
+            android:id="@+id/Cord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/Name"
+            android:layout_alignRight="@+id/Name"
+            android:layout_below="@+id/Videourl"
+            android:gravity="center"
+            android:text=" Co-ordinates"
+            android:textColor="#000"
+            android:textSize="30dp" />
 
         <TextView
             android:id="@+id/Longitude"
@@ -96,21 +147,22 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/Phone"
             android:gravity="center"
-            android:text="Longitude: "
+
             android:textColor="#000"
-            android:textSize="20dp" />
+            android:textSize="30dp" />
 
         <TextView
             android:id="@+id/LongitudeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/PhoneTextView"
-            android:layout_alignStart="@+id/PhoneTextView"
-            android:layout_below="@+id/PhoneTextView"
+            android:layout_alignLeft="@+id/LocationTextView"
+            android:layout_alignStart="@+id/LocationTextView"
+            android:layout_below="@+id/Videourl"
+            android:layout_marginTop="43dp"
             android:gravity="center"
             android:text="Show Longitude"
             android:textColor="#000"
-            android:textSize="20dp" />
+            android:textSize="30dp" />
 
 
         <TextView
@@ -121,21 +173,21 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/Longitude"
             android:gravity="center"
-            android:text="Latitude: "
+
             android:textColor="#000"
-            android:textSize="20dp" />
+            android:textSize="30dp" />
 
         <TextView
             android:id="@+id/LatitudeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/PhoneTextView"
-            android:layout_alignRight="@+id/PhoneTextView"
+            android:layout_alignLeft="@+id/LongitudeTextView"
+            android:layout_alignStart="@+id/LongitudeTextView"
             android:layout_below="@+id/LongitudeTextView"
             android:gravity="center"
             android:text="Show Latitude"
             android:textColor="#000"
-            android:textSize="20dp" />
+            android:textSize="30dp" />
 
 
         <TextView
@@ -146,21 +198,33 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/Latitude"
             android:gravity="center"
-            android:text="Location: "
+
             android:textColor="#000"
-            android:textSize="20dp" />
+            android:textSize="30dp" />
 
         <TextView
             android:id="@+id/LocationTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/LatitudeTextView"
-            android:layout_alignStart="@+id/LatitudeTextView"
-            android:layout_below="@+id/LatitudeTextView"
+            android:layout_alignLeft="@+id/PhoneTextView"
+            android:layout_alignStart="@+id/PhoneTextView"
+            android:layout_below="@+id/Latitude"
+            android:layout_marginTop="17dp"
             android:gravity="center"
             android:text="Show Location"
             android:textColor="#000"
-            android:textSize="20dp" />
+            android:textSize="30dp" />
+
+
+        <Button
+            android:id="@+id/DisplayButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/VideourlTextView"
+            android:layout_alignBottom="@+id/VideourlTextView"
+            android:layout_toEndOf="@+id/Videourl"
+            android:layout_toRightOf="@+id/Videourl"
+            android:text="CLICK TO PLAY VIDEO" />
 
 
     </RelativeLayout>

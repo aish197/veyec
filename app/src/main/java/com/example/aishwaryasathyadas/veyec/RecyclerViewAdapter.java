@@ -9,6 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import java.util.List;
@@ -47,6 +49,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.LatitudeTextView.setText(String.valueOf(studentDetails.getLatitude()));
         holder.LocationTextView.setText(studentDetails.getLocation());
 
+        animate(holder);
+
     }
     @Override
     public int getItemCount() {
@@ -73,5 +77,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             LatitudeTextView = (TextView) itemView.findViewById(R.id.LatitudeTextView);
             LocationTextView = (TextView) itemView.findViewById(R.id.LocationTextView);
         }
+    }
+
+    public void animate(RecyclerView.ViewHolder viewHolder) {
+        final Animation animAnticipateOvershoot = AnimationUtils.loadAnimation(context, R.anim.anticipate_overshoot_interpolator);
+        viewHolder.itemView.setAnimation(animAnticipateOvershoot);
     }
 }
