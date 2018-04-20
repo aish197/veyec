@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     // Declaring String variable ( In which we are storing firebase server URL ).
     public static final String Firebase_Server_URL = "https://phoneauth-ce710.firebaseio.com/";
 
-    // Declaring String variables to store name & phone number get from EditText.
+    // Declaring String variables to store variable values get from EditText.
     String DateHolder, PhoneHolder, VideoHolder,LongitudeHolder,LatitudeHolder,LocationHolder;
 
     Firebase firebase;
@@ -52,10 +52,6 @@ public class MainActivity extends AppCompatActivity {
         studentDetails.setVideourl(LongitudeHolder);
         studentDetails.setVideourl(LatitudeHolder);
         studentDetails.setLocation(LocationHolder);
-
-
-        // Getting the ID from firebase database.
-      //  String StudentRecordIDFromServer = databaseReference.push().getKey();
 
 
         // Showing Toast message after successfully data submit.
